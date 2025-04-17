@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تطبيق GHT</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #D4AF37;
+      color: #000;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: #000;
+      color: white;
+    }
+    header img {
+      height: 60px;
+    }
+    nav {
+      display: flex;
+      gap: 10px;
+    }
+    nav a {
+      color: #D4AF37;
+      background-color: #222;
+      padding: 8px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #222;
+      color: #fff;
+    }
+    .hero img {
+      max-width: 300px;
+      margin-top: 20px;
+      border-radius: 12px;
+    }
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+    .download-buttons {
+      margin-top: 20px;
+    }
+    .download-buttons img {
+      height: 50px;
+      margin: 0 10px;
+    }
+    .section {
+      padding: 50px 20px;
+    }
+    .section h2 {
+      color: #000;
+    }
+    .section p {
+      background-color: #f5f5f5;
+      padding: 15px;
+      border-radius: 8px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .testimonials {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .testimonial {
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      width: 250px;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .contact-form button {
+      padding: 10px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="/mnt/data/file-U1DuDgmmrHRsdxh5kAS2Pj" alt="GHT Logo">
+    <nav>
+      <a onclick="setLanguage('ar')">العربية</a>
+      <a onclick="setLanguage('fr')">Français</a>
+      <a href="#">تسجيل الدخول</a>
+      <a href="#">فتح حساب</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1 id="hero-title">تطبيقك الموثوق للتنقل بين مدن الجهة الشرقية</h1>
+    <p id="hero-desc">يربط GHT بين المسافرين وأصحاب المقاعد الشاغرة لتسهيل التنقل بشكل آمن وسريع وبتكلفة منخفضة.</p>
+    <img src="https://img.freepik.com/free-photo/man-car-using-phone_23-2148884564.jpg" alt="شخص داخل السيارة ويمسك الهاتف">
+    <div class="download-buttons">
+      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_AR.svg" alt="Google Play"></a>
+      <a href="#"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store"></a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 id="about-title">نبذة عن التطبيق</h2>
+    <p id="about-desc">تطبيق GHT هو حل ذكي للتنقل داخل الجهة الشرقية من المغرب، يتيح للمستخدمين العثور على رحلات متاحة يوميًا والتواصل بسهولة مع السائقين لتأمين مقعد في الرحلات اليومية.</p>
+  </section>
+
+  <section class="section">
+    <h2 id="reviews-title">آراء المستخدمين</h2>
+    <div class="testimonials">
+      <div class="testimonial">"تطبيق ممتاز! ساعدني ألاقي سيارة بسرعة وسعر مناسب." - ندى</div>
+      <div class="testimonial">"خدمة رائعة، أنصح الجميع باستخدامه." - كريم</div>
+      <div class="testimonial">"سافرت مع GHT وشعرت بالأمان والراحة." - سارة</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 id="contact-title">تواصل معنا</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="الاسم الكامل" required>
+      <input type="email" placeholder="البريد الإلكتروني" required>
+      <textarea rows="4" placeholder="رسالتك" required></textarea>
+      <button type="submit">إرسال</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>جميع الحقوق محفوظة &copy; GHT 2025</p>
+  </footer>
+
+  <script>
+    const translations = {
+      fr: {
+        "hero-title": "Votre application fiable pour voyager entre les villes de l'Oriental",
+        "hero-desc": "GHT relie les voyageurs aux conducteurs ayant des sièges disponibles pour faciliter les déplacements de manière sûre, rapide et économique.",
+        "about-title": "À propos de l'application",
+        "about-desc": "GHT est une solution intelligente pour le transport dans la région de l'Oriental du Maroc, permettant aux utilisateurs de trouver facilement des trajets quotidiens et de contacter les conducteurs.",
+        "reviews-title": "Avis des utilisateurs",
+        "contact-title": "Contactez-nous"
+      },
+      ar: {
+        "hero-title": "تطبيقك الموثوق للتنقل بين مدن الجهة الشرقية",
+        "hero-desc": "يربط GHT بين المسافرين وأصحاب المقاعد الشاغرة لتسهيل التنقل بشكل آمن وسريع وبتكلفة منخفضة.",
+        "about-title": "نبذة عن التطبيق",
+        "about-desc": "تطبيق GHT هو حل ذكي للتنقل داخل الجهة الشرقية من المغرب، يتيح للمستخدمين العثور على رحلات متاحة يوميًا والتواصل بسهولة مع السائقين لتأمين مقعد في الرحلات اليومية.",
+        "reviews-title": "آراء المستخدمين",
+        "contact-title": "تواصل معنا"
+      }
+    };
+
+    function setLanguage(lang) {
+      const keys = Object.keys(translations[lang]);
+      keys.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = translations[lang][id];
+      });
+    }
+  </script>
+</body>
+</html>
